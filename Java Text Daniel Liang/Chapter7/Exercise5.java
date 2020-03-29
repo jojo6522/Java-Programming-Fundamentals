@@ -9,7 +9,7 @@ Write a program that reads ten integers, and then displays the number of even an
 
 import java.util.Scanner;
 
-public class EvenOdd
+public class Exercise5
 {
     public static void main(String[] args)
     {
