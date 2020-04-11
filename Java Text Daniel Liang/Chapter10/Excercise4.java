@@ -15,3 +15,41 @@
 * program that creates the two points (0, 0) and (10, 30.5) and displays the     *
 * distance between them.                                                         *
 *********************************************************************************/
+public class MyPoint {
+
+    private int x,y;
+
+    public MyPoint()
+    {
+        x=0;
+        y=0;
+
+    }
+
+    public MyPoint(int ex, int why)
+    {
+        x=ex;
+        y=why;
+    }
+
+    public int distance(MyPoint p)
+    {
+        return distance(p, this);
+
+    }
+
+    public int distance(MyPoint p, MyPoint q)
+    {
+        return p.x-q.x + p.y-q.y;
+
+    }
+
+    public static void main(String[] args)
+    {
+        MyPoint p1 = new MyPoint();
+        MyPoint p2 = new MyPoint(10,30);
+
+        System.out.println("The distance is " + p1.distance(p2));
+
+    }
+}
