@@ -1,0 +1,46 @@
+import java.util.Scanner;
+public class Exercises {
+    public static void main(String[] args)
+    {
+        int n;
+        Scanner p = new Scanner(System.in);
+        System.out.println(" Please enter a number: ");
+        n = p.nextInt();
+        System.out.println("The reverse number is " + reverse(n) );
+        if(isPalindrome(n))
+        {
+            System.out.println("Yes, a palindrome ");
+        }else{
+            System.out.println("No, not a palindrome ");
+        }
+
+    }
+
+    public static int reverse(int number)
+    {
+        // converting number to String
+        String tempString = number + "";
+        String result = "";
+
+        // using a for loop to iterate through the string printing the last value first
+        for(int i = tempString.length() - 1; i>=0; i--)
+        {
+            result  = result + tempString.charAt(i);
+        }
+
+        return Integer.parseInt(result);
+    }
+
+    public static boolean isPalindrome(int number)
+    {
+        if (number == reverse(number))
+        {
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+
+
+}
